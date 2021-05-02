@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
-class PromotionsFake < Promotions
+class PromotionsFake < Promotions::Declaration
   item do
-    product_code Promotions::String
-    name Promotions::String
-    price Promotions::Money
+    product_code Item::String
+    name Item::String
+    price Item::Money
   end
 
   # money.rb currency
   currency do
-    iso_code "USD"
-    iso_numeric  "840"
-    name "United States Dollar"
-    symbol "$"
-    subunit "Cent"
+    iso_code "GBP"
+    iso_numeric  "826"
+    name "Pound sterling"
+    symbol "£"
+    subunit "Penny"
     subunit_to_unit 100
     decimal_mark "."
     thousands_separator ","

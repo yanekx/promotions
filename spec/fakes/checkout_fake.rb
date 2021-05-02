@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "./example_promotions"
-
 class CheckoutFake
   def initialize(promotional_rules)
     @promotional_rules = promotional_rules
