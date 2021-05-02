@@ -1,8 +1,10 @@
-require_relative 'types/money'
-require_relative 'types/string'
+# frozen_string_literal: true
+
+require_relative "types/money"
+require_relative "types/string"
 
 module Promotions
-   module Types
+  module Types
     TYPES = [Promotions::Types::String, Promotions::Types::Money].freeze
 
     def self.check_type(name)
