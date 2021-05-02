@@ -1,4 +1,5 @@
 require_relative 'declaration/item'
+require_relative 'declaration/currency'
 
 module Promotions
   class Declaration
