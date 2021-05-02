@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["yan.summer23@gmail.com"]
 
   spec.summary       = "A small promotions library for your own small marketplace app."
-  spec.homepage      = 'https://github.com/yanekx/promotions'
+  spec.homepage      = "https://github.com/yanekx/promotions"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 3.0.0")
 
@@ -20,5 +20,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Money gem to handle currencies
-  spec.add_dependency 'money', '~> 6.7', '>= 6.7.1'
+  spec.add_dependency "money", "~> 6.7", ">= 6.7.1"
 end
