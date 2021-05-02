@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
 require "promotions"
+require_relative "helpers/checkout_helper"
 
 RSpec.configure do |config|
+  # helper methods for checkout specs
+  config.include CheckoutHelper
+
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
 
