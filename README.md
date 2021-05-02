@@ -55,13 +55,13 @@ A small example:
 
           # money.rb currency
           currency do 
-            iso_code  "USD",
-            iso_numeric  "840",
-            name "United States Dollar",
-            symbol "$",
-            subunit "Cent",
-            subunit_to_unit 100,
-            decimal_mark ".",
+            iso_code  "USD"
+            iso_numeric  "840"
+            name "United States Dollar"
+            symbol "$"
+            subunit "Cent"
+            subunit_to_unit 100
+            decimal_mark "."
             thousands_separator ","
           end
 
