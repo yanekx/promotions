@@ -4,7 +4,7 @@ module Promotions
   class Declaration
     class Item
       def self.create_item(block)
-        self::new.instance_eval(&block)
+        self::new.tap { |item| item.instance_eval(&block) }
       end
 
       def self.const_missing(name)
