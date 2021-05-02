@@ -21,4 +21,7 @@ Gem::Specification.new do |spec|
 
   # Money gem to handle currencies
   spec.add_dependency "money", "~> 6.7", ">= 6.7.1"
+
+  # For convinient debugging
+  spec.add_development_dependency 'byebug', '~> 11.1', '>= 11.1.3'
 end
