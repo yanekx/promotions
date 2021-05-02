@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    promotions (0.0.3)
+    promotions (0.0.4)
       money (~> 6.7, >= 6.7.1)
 
 GEM
