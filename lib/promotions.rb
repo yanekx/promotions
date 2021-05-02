@@ -2,6 +2,4 @@
 
 require_relative "promotions/version"
 
-module Promotions
-  class Error < StandardError; end
-end
+module Promotions; end
