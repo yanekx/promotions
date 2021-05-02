@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "fakes/promotions_fake"
+require_relative "fakes/checkout_fake"
 
 RSpec.describe Promotions do
   it "has a version number" do
