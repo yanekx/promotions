@@ -5,6 +5,12 @@ require_relative "../types"
 module Promotions
   class Declaration
     class Item
+      attr_reader :item_declarations
+
+      def initialize
+        @item_declarations = []
+      end
+
       def self.create_item(block)
         new.tap { |item| item.instance_eval(&block) }
       end
@@ -16,10 +22,10 @@ module Promotions
       end
 
       def method_missing(method_name, *args, &block)
-        instance_variable_set(:@type, args.first)
+        @item_declarations << { name: method_name, type: args.first }
 
         define_singleton_method(method_name) { self }
-      rescue NameError
+      rescue NoMatchingPatternError
         super
       end
     end
