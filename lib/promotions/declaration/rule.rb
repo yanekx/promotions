@@ -4,7 +4,7 @@ require_relative "../types"
 
 module Promotions
   class Declaration
-    class Rule < BasicObject
+    class Rule
       attr_reader :calls
 
       def initialize
@@ -18,7 +18,7 @@ module Promotions
       def method_missing(method_name, *args, &block)
         parse_call([method_name, args.first, block])
         self
-      rescue NameError
+      rescue NoMatchingPatternError
         super
       end
 
@@ -52,8 +52,8 @@ module Promotions
         in Symbol => method_name, Float => argument
           @calls << { name: method_name, argument: argument, argument_type: Float }
 
-        in Symbol => method_name, Promotions::Declaration::Rule => argument
-          @calls << { name: method_name, argument_type: Promotions::Declaration::Rule }
+        in Symbol => method_name, Rule => argument
+          @calls << { name: method_name, argument_type: Rule }
           argument.send(method_name)
         end
       end
