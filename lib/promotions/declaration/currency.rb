@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "byebug"
-
 module Promotions
   class Declaration
     class Currency
