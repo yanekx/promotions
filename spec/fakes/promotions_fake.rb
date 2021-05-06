@@ -20,12 +20,12 @@ class PromotionsFake < Promotions::Declaration
   end
 
   rules do
-    items.price.sum.gte 60.pounds do
-      items.price.sum * 0.9
+    items.price.sum.greater.or.equal(60).pounds do
+      items.price.sum.multiply(0.9)
     end
 
-    product_code.eq("002").& item.count.eq(2) do
-      item.price = 8.50
+    product_code.eq("002").& items.count.eq(2) do
+      item.price.assign(8.50).pounds
     end
   end
 end

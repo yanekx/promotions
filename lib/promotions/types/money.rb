@@ -2,7 +2,6 @@
 
 module Promotions
   module Types
-    class Money
-    end
+    class Money; end
   end
 end

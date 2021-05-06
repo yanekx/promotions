@@ -2,7 +2,6 @@
 
 module Promotions
   module Types
-    class String
-    end
+    class String; end
   end
 end

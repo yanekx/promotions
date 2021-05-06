@@ -1,5 +1,5 @@
 AllCops:
-  TargetRubyVersion: 3.0
+  TargetRubyVersion: 3.0.1
   NewCops: enable
 
 Style/StringLiterals:
@@ -21,4 +21,10 @@ Style/MissingRespondToMissing:
   Enabled: false
 
 Layout/LineLength:
-  Max: 120
+  Max: 200
+
+Style/Semicolon:
+  Enabled: false
+
+Lint/EmptyClass:
+  Enabled: false

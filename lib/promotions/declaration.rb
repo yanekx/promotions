@@ -2,6 +2,7 @@
 
 require_relative "declaration/item"
 require_relative "declaration/currency"
+require_relative "declaration/rule"
 
 module Promotions
   class Declaration
@@ -11,6 +12,10 @@ module Promotions
 
     def self.currency(&block)
       @currency = Currency.create_currency(block)
+    end
+
+    def self.rules(&block)
+      @rule = Rule.create_rule(block)
     end
   end
 end
