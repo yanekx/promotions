@@ -1,4 +1,4 @@
-# Promotions
+# Promotions(Currenly you can't use it)
 
 A small promotions library for your own small marketplace app.
 
